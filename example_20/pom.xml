@@ -8,11 +8,11 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.eazybytes</groupId>
-	<artifactId>example_20</artifactId>
+	<groupId>com.exampleSchool</groupId>
+	<artifactId>exampleSchool</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>example_20</name>
-	<description>Eazy School Web Application</description>
+	<name>exampleSchool</name>
+	<description>School Web Application</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -30,6 +30,10 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
