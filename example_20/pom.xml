@@ -8,10 +8,10 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.exampleSchool</groupId>
-	<artifactId>exampleSchool</artifactId>
+	<groupId>com.exampleSchooll</groupId>
+	<artifactId>exampleSchooll</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>exampleSchool</name>
+	<name>exampleSchooll</name>
 	<description>School Web Application</description>
 	<properties>
 		<java.version>17</java.version>
