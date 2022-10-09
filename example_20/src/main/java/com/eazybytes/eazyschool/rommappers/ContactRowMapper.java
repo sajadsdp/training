@@ -24,7 +24,7 @@ public class ContactRowMapper implements RowMapper<Contact> {
         if (null != rs.getTimestamp("UPDATED_AT")){
             contact.setUpdateAt(rs.getTimestamp("UPDATE_AT").toLocalDateTime());
         }
-        contact.setUpdateBy(rs.getString("UPDATED_BY"));
+        contact.setUpdateBy(rs.getString("UPDATED _BY"));
         return contact;
     }
 }
