@@ -6,12 +6,8 @@ import com.eazybytes.eazyschool.repository.ContactRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
-
-import static java.time.LocalDateTime.now;
 
 @Slf4j
 @Service
@@ -26,8 +22,6 @@ public class  ContactService {
     public boolean saveMessageDetails(Contact contact){
         boolean isSave = false;
         contact.setStatus(EazySchoolConstant.OPEN);
-        contact.setCreatedBy(EazySchoolConstant.ANONYMOUS);
-        contact.setCreatedAt(LocalDateTime.now());
         Contact savedContact  = contactRepository.save(contact);
         if(null != savedContact && savedContact.getContactId()>0){
             isSave = true;
@@ -40,13 +34,11 @@ public class  ContactService {
         return contactMsgs;
     }
 
-    public boolean updateMsgStatus(int contactID,String updatedBy){
+    public boolean updateMsgStatus(int contactID){
         boolean isUpdated = false;
         Optional<Contact> contact = contactRepository.findById(contactID);
         contact.ifPresent(contact1 -> {
             contact1.setStatus(EazySchoolConstant.CLOSE);
-            contact1.setUpdatedBy(updatedBy);
-            contact1.setUpdatedAt(now());
         });
         Contact updateContact = contactRepository.save(contact.get());
         if (null != updateContact && updateContact.getContactId()>0){
