@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EnableJpaRepositories("com.eazybytes.eazyschool.repository")
 @EntityScan("com.eazybytes.eazyschool.model")
-@EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
+@EnableJpaAuditing(auditorAwareRef =  "auditAwareImpl")
 public class EazyschoolApplication {
 
 	public static void main(String[] args) {
