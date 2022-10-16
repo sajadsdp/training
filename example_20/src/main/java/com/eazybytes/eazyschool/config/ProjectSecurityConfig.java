@@ -39,12 +39,13 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
 //
 //    }
 
-    @Override
-    protected void configure (AuthenticationManagerBuilder auth) throws Exception{
-        auth.inMemoryAuthentication()
-                .withUser("user").password("12345").roles("USER")
-                .and()
-                .withUser("admin").password("12345").roles("ADMIN")
-                .and().passwordEncoder( NoOpPasswordEncoder.getInstance());
-    }
+// hard code for admin
+//    @Override
+//    protected void configure (AuthenticationManagerBuilder auth) throws Exception{
+//        auth.inMemoryAuthentication()
+//                .withUser("user").password("12345").roles("USER")
+//                .and()
+//                .withUser("admin").password("12345").roles("ADMIN")
+//                .and().passwordEncoder( NoOpPasswordEncoder.getInstance());
+//    }
 }
