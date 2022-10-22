@@ -37,7 +37,7 @@ public class Person extends BaseEntity{
     private String name;
 
     @NotBlank(message="Mobile number must not be blank")
-    @Pattern(regexp="(^$|[0-9]{10})",message = "Mobile number must be 10 digits")
+    @Pattern(regexp="(^$|[0-9]{11})",message = "Mobile number must be 11 digits")
     private String mobileNumber;
 
     @NotBlank(message="Email must not be blank")
@@ -66,4 +66,8 @@ public class Person extends BaseEntity{
     @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL, targetEntity = Address.class)
     @JoinColumn(name = "address_id", referencedColumnName = "addressId",nullable = true)
     private Address address;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @JoinColumn(name = "class_id", referencedColumnName = "classId", nullable = true)
+    private EazyClass eazyClass;
 }
