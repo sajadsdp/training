@@ -10,7 +10,7 @@ import java.util.List;
 
 @FeignClient(name = "contact", url = "http://localhost:8080/api/contact",
     configuration = ProjectConfiguration.class)
-public interface ContactProxy {
+public interface ContactProxy { 
 
     @RequestMapping(method = RequestMethod.GET, value = "/getMessagesByStatus")
     @Headers(value = "Content-Type: application/json")

@@ -33,7 +33,16 @@ public class DashboardController {
             model.addAttribute("enrolledClass",person.getEazyClass().getName());
         }
         session.setAttribute("loggedInPerson", person);
+        logMessages();
         return "dashboard.html";
+    }
+
+    private void logMessages() {
+         log.error("Error Message from the dashboard page");
+        log.warn("Warn Message from the dashboard page");
+        log.info("Info Message from the dashboard page");
+        log.debug("Debug Message from the dashboard page");
+        log.trace("Trace Message from the dashboard page");
     }
 
 }
